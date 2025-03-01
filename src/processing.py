@@ -8,3 +8,7 @@ def filter_by_state(list_of_value):
                 continue
     return new_list
 
+
+from datetime import datetime
+def sort_by_date(data, descending=True):
+    return sorted(data, key=lambda x: datetime.fromisoformat(x['date']), reverse=descending)
